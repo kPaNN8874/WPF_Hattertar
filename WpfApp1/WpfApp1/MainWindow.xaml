@@ -1,0 +1,78 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Háttértár" Height="300" Width="500" Background="AntiqueWhite">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label VerticalAlignment="Center" FontSize="18" 
+               HorizontalContentAlignment="Left"
+               FontWeight="Bold" Margin="0,0,166,0" Grid.ColumnSpan="2">
+            Kapacitás:
+        </Label>
+        <TextBox x:Name="lblKapacitas"
+            Height="30" Background="#FFE4E4E4"
+            Grid.Column="1"
+            
+                 />
+        <Label VerticalAlignment="Center"
+               Width="299" FontSize="18" 
+               HorizontalContentAlignment="Left"
+               Grid.Row="1"
+               FontWeight="Bold">Átviteli sebbesség:</Label>
+        <Slider x:Name="sliAtviteliSeb"
+                Grid.Column="1"
+                Grid.Row="1" 
+                VerticalAlignment="Center"
+                Minimum="10"
+                Maximum="5000"
+                Value="3250"
+                
+                />
+        <ComboBox Grid.Column="2"
+                  Width="50"
+                  Height="30">
+            <ComboBoxItem IsSelected="True">MB</ComboBoxItem>
+            <ComboBoxItem>GB</ComboBoxItem>
+            <ComboBoxItem>TB</ComboBoxItem>
+
+        </ComboBox>
+        <ComboBox Grid.Column="2"
+                  Grid.Row="1"
+                  Width="60"
+                  Height="30">
+            <ComboBoxItem>kBps</ComboBoxItem>
+            <ComboBoxItem>KBps</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">MBps</ComboBoxItem>
+            <ComboBoxItem>GBps</ComboBoxItem>
+            
+
+        </ComboBox>
+        <Button x:Name="btnSzamol"
+                Grid.Row="2" 
+                Height="50"
+                Width="150"
+                Content="Számol" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Click="btnSzamol_Click"
+                />
+        <Label x:Name="lblEredmeny"
+               Grid.Column="2"
+               Grid.Row="2"
+               FontSize="18"
+               FontWeight="Bold"
+               />
+
+    </Grid>
+</Window>
